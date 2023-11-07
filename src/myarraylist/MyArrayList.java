@@ -53,7 +53,6 @@ public class MyArrayList<T> {
                     return;
                 }
             }
-            return;
         } catch (IndexOutOfBoundsException ex){
             System.out.println("Incorrect index");
         }
