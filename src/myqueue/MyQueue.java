@@ -1,9 +1,5 @@
-package MyQueue;
-import MyLinkedList.Node;
-
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.NoSuchElementException;
+package myqueue;
+import mylinkedlist.Node;
 
 public class MyQueue<T> {
 

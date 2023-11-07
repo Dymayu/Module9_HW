@@ -1,4 +1,4 @@
-package MyStack;
+package mystack;
 
 public class MyStack<T> {
 

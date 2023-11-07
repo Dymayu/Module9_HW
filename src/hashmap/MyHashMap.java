@@ -1,4 +1,4 @@
-package HashMap;
+package hashmap;
 
 public class MyHashMap<K, V> {
     private Entry<K, V>[] buckets;

@@ -1,4 +1,4 @@
-package HashMap;
+package hashmap;
 
 public class Entry<K,V> {
     private K key;

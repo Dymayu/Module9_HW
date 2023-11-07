@@ -1,4 +1,4 @@
-package MyQueue;
+package mylinkedlist;
 
 public class Node<T> {
     private Node<T> prevNode;
