@@ -22,8 +22,12 @@ public class MyArrayList<T> {
     }
 
     public T get(int index) {
+        if (index < size){
+            return (T) values[index];
+        } else {
+            return (T) "you entered incorrect index";
+        }
 
-        return (T) values[index];
     }
 
     public int size(){
@@ -37,18 +41,22 @@ public class MyArrayList<T> {
         size=0;
     }
 
-    public boolean remove(int index) {
-        for (int i = 0; i < size; i++) {
-            if (values[index].equals(values[i])) {
-                int numToMove = size - i - 1;
-                if (numToMove > 0) {
-                    System.arraycopy(values, i + 1, values, i, numToMove);
+    public void remove(int index) {
+        try {
+            for (int i = 0; i < size; i++) {
+                if (values[index].equals(values[i])) {
+                    int numToMove = size - i - 1;
+                    if (numToMove > 0) {
+                        System.arraycopy(values, i + 1, values, i, numToMove);
+                    }
+                    values[--size] = null;
+                    return;
                 }
-                values[--size] = null;
-                return true;
             }
+            return;
+        } catch (IndexOutOfBoundsException ex){
+            System.out.println("Incorrect index");
         }
-        return false;
     }
 
     @Override
@@ -75,15 +83,15 @@ public class MyArrayList<T> {
         arrayList.add("name15");
         arrayList.add("name16");
 
-        //System.out.println(arrayList.get(0));
-        System.out.println(arrayList.get(5));
+        System.out.println(arrayList.get(0));
+        //System.out.println(arrayList.get(99));
         System.out.println(arrayList.size());
         //arrayList.clear();
         //System.out.println(arrayList.size());
 
         arrayList.remove(5);
 
-        System.out.println(arrayList.get(5));
+        //System.out.println(arrayList.get(5));
         System.out.println(arrayList.size);
 
     }
