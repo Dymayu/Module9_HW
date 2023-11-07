@@ -25,7 +25,7 @@ public class MyArrayList<T> {
         if (index < size){
             return (T) values[index];
         } else {
-            return (T) "you entered incorrect index";
+            throw new IllegalArgumentException("incorrect index");
         }
 
     }
@@ -82,16 +82,16 @@ public class MyArrayList<T> {
         arrayList.add("name15");
         arrayList.add("name16");
 
-        System.out.println(arrayList.get(0));
+        System.out.println(arrayList.get(5));
         //System.out.println(arrayList.get(99));
-        System.out.println(arrayList.size());
+        //System.out.println(arrayList.size());
         //arrayList.clear();
         //System.out.println(arrayList.size());
 
-        arrayList.remove(5);
+        //arrayList.remove(5);
 
         //System.out.println(arrayList.get(5));
-        System.out.println(arrayList.size);
+        //System.out.println(arrayList.size);
 
     }
 
